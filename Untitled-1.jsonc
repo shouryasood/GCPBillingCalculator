@@ -1,0 +1,71 @@
+{
+  
+    "costScenario": 
+    {
+      
+            "workloads": [
+              {
+                "name": "Wl1",
+                
+                // Compute Workload Start
+                "computeVmWorkload": {
+                  "region": "us-central1",
+                  "machineType": {
+                    
+                  },
+                  "guestAccelerator": {
+                    
+                  },
+                  "preemptible": true,
+                  "enableConfidentialCompute": false,
+                  "licenses": [
+                    "projects/centos-cloud/global/licenses/centos-stream-9"
+                  ],
+                  "persistentDisks": [
+                    {
+                      "scope": {
+                        "usageRateTimeline": {
+                            "unit": "GiBy",
+                            "usageRateTimelineEntries": [
+                                {
+                                    "estimationTimeFrameOffset": "2628000s"
+                                }
+                            ]
+                        }
+                    },
+                    
+                      "diskType": "pd-extreme",
+                      
+                      "diskSize": {
+                          "usageRateTimeline": {
+                              "usageRate": 300
+                          }
+                      },
+                      "provisionedIops": {
+                          "usageRateTimeline": {
+                              "unit": "GiBy",
+                              "usageRateTimelineEntries": [
+                                  {
+                                      "usageRate": 2600
+                                  }
+                              ]
+                          }
+                      }
+                  }
+                  ],
+                  "instancesRunning": {
+                    "usageRateTimeline": {
+                      
+                    }
+                  }
+                }
+                // Compute Workload End
+                
+              }
+            ],
+            "scenarioConfig": {
+              "estimateDuration": "2628000s"
+            }
+    }
+        
+}

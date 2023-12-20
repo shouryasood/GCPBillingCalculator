@@ -1,0 +1,58 @@
+{
+  
+  "costScenario": 
+  {
+    
+          "workloads": [
+            {
+              "name": "DemoWorkload",
+              "computeVmWorkload": {
+                
+                  "region": "asia-east2",
+                  "persistentDisks": [
+                    {
+                      "diskType": "pd-standard",
+                      "scope": "SCOPE_ZONAL",
+                      "diskSize": {
+                        "usageRateTimeline": {
+                          "unit": "GiBy",
+                          "usageRateTimelineEntries": [
+                            {
+                              "effectiveTime": {
+                                "estimationTimeFrameOffset": "2628000s"
+                              },
+                              "usageRate": 1024
+                            }
+                          ]
+                        }
+                        },
+                      "provisionedIops": {
+                        "usageRateTimeline": {
+                          "unit": "2/s",
+                          "usageRateTimelineEntries": [
+                            {
+                              "estimationTimeFrameOffset": "2628000s"
+                            }
+                          ]
+                          }
+                        }
+                    }
+                  ],
+                  "instancesRunning": {
+                    "effectiveTime": {
+                      "estimationTimeFrameOffset": "2628000s"
+                    },
+                    "usageRate": 1
+                  }
+                  
+                
+              
+              }
+            }
+          ],
+          "scenarioConfig": {
+            "estimateDuration": "2628000s"
+          }
+  }
+      
+}
